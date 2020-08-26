@@ -1,38 +1,125 @@
-.App {
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 10px 50px;
+}
+.main_container {
+  width: 400px !important;
+  height: auto;
+  background-color: #d9d9d9;
+  background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
+  box-shadow: 0 0 10px #008080;
+  margin-top: 30px;
+  padding: 10px 50px;
+}
+.header {
+  text-align: center;
+  margin: 10px, 0;
+  color: #008080;
+}
+.expence_income {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 10px gray;
+  height: 100px;
+}
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  letter-spacing: 1px;
+  margin: 0;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.form_container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px, 10px;
+}
+.form_container {
+  padding: 10px;
+  margin: 10px, 10px;
+}
+.btn {
+  cursor: pointer;
+  background-color: #008080;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  font-weight: bold;
+}
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+.money.plus {
+  color: #b6960a;
+  font-weight: bold;
+}
+
+.money.minus {
+  color: #008080;
+  font-weight: bold;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.list li.plus {
+  border-right: 5px solid #b6960a;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list li.plus:hover {
+  border-right: 5px solid #b6960a;
+  background-color: #b6960a;
+  color: #f7f7f7;
+}
+
+.list li.minus {
+  border-right: 5px solid #2da3ad;
+}
+
+.list li.minus:hover {
+  border-right: 5px solid #2da3ad;
+  background-color: #2da3ad;
+  color: #f7f7f7;
 }
