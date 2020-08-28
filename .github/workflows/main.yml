@@ -6,7 +6,7 @@ name: Expensify CI-CD
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 #   pull_request:
 #     branches: [ master ]
 
@@ -19,25 +19,24 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
 
-    # Runs a single command using the runners shell
-    - name: Install Node.JS
-      uses: actions/setup-node@v2-beta
-      with:
-        node-version: 12
-  
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: install #will run `yarn install`
-      
-    - name: React app Building
-      run: yarn build
-      
-    - name: Installing Surge
-      run: npm install --global surge
-  
-    - name: Deploying to surge #CI
-      run: ./build react-expense-tracker-by-aisha-khan.surge.sh --token ${{secrets.SURGE_TOKEN}}
-    
+      # Runs a single command using the runners shell
+      - name: Install Node.JS
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 12
+
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install #will run `yarn install`
+
+      - name: React app Building
+        run: yarn run build
+
+      - name: Installing Surge
+        run: npm install --global surge
+
+      - name: Deploying to surge #CI
+        run: ./build react-expense-tracker-by-aisha-khan.surge.sh --token ${{secrets.SURGE_TOKEN}}

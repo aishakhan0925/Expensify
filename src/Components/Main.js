@@ -1,14 +1,15 @@
 import React, { useContext, useState } from "react";
-import { Header, ExpenseIncome } from ".";
-import { HISTORY } from "../Context/createContext";
+import { Header, TransactionHistory, AddTransaction, TotalExpense } from ".";
+import { GlobalProvider } from "../Context/createContext";
 export default function Main() {
-  let history = useContext(HISTORY);
   return (
-    <HISTORY.Provider value={history}>
+    <GlobalProvider>
       <div className="main_container">
         <Header />
-        <ExpenseIncome />
+        <TotalExpense />
+        <TransactionHistory />
+        <AddTransaction />
       </div>
-    </HISTORY.Provider>
+    </GlobalProvider>
   );
 }
