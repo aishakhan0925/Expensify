@@ -77,6 +77,7 @@ h2 {
   list-style-type: none;
   padding: 0;
   margin-bottom: 40px;
+  position: relative;
 }
 
 .list li {
@@ -85,13 +86,13 @@ h2 {
   color: #333333;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 15px;
   margin: 10px 0;
   font-family: "Lucida Sans";
   font-weight: bold;
   border-radius: 5px;
   font-size: 18px;
-  position: relative;
+  /* position: relative !important; */
   text-transform: capitalize;
 }
 
@@ -116,20 +117,21 @@ h2 {
 
 .del-btn {
   cursor: pointer;
-  background-color: #8a6a66;
+  background-color: #620f04;
   border: 0;
   color: #fff;
   font-size: 20px;
   line-height: 20px;
-  padding: 2px 5px;
-  /* position: absolute; */
+  padding: 5px 10px;
+  position: absolute;
+  margin-top: 25px;
   top: 50%;
   left: 0;
   transform: translate(-100%, -50%);
-  opacity: 2;
-  transition: opacity 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.7s ease;
 }
 
-.list li:hover .del-btn {
+.list:hover .del-btn {
   opacity: 1;
 }

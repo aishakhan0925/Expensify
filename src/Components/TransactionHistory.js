@@ -20,10 +20,6 @@ export default function TransactionHistory() {
         {transactions.transactions.map((trans, ind) => {
           return (
             <span className="list">
-              <li key={trans.id} className={transactionType}>
-                <span>{trans.desc}</span>
-                <span>${Math.abs(trans.amount)}</span>
-              </li>
               <button
                 className="del-btn"
                 onClick={() => {
@@ -31,7 +27,11 @@ export default function TransactionHistory() {
                 }}
               >
                 X
-              </button>
+              </button>{" "}
+              <li key={ind} className={transactionType}>
+                <span>{trans.desc}</span>
+                <span>${Math.abs(trans.amount)}</span>
+              </li>
             </span>
           );
         })}

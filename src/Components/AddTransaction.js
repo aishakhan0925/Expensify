@@ -12,6 +12,7 @@ export default function AddTransaction() {
     e.preventDefault();
     // console.log(desc, amount);
     addTransaction({
+      id: new Date().getTime(),
       desc: desc,
       amount: Number(amount),
     });
