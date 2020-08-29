@@ -14,7 +14,7 @@ export default function AddTransaction() {
 
   const handleTransaction = (e) => {
     e.preventDefault();
-    console.log(desc, amount);
+    // console.log(desc, amount);
     addTransaction({
       desc: desc,
       amount: Number(amount),

@@ -3,8 +3,14 @@ import { GlobalContext } from "../Context/createContext";
 
 export default function TransactionHistory() {
   let { transactions, delTransaction } = useContext(GlobalContext);
-  const transactionType = transactions.amount > 0 ? "positive" : "negative";
-  // const sign = transactions.amount > 0 ? "+" : "-";
+  const transactionClass = transactions.transactions.map((i) => {
+    return i.amount;
+  });
+  console.log(transactionClass);
+  const transactionType = transactionClass > 0 ? "positive" : "negative";
+  console.log(transactionType);
+
+  // const sign = transactions.transactions.amount > 0 ? "+" : "-";
   // console.log(transactions);
   return (
     <div>
